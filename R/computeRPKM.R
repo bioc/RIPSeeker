@@ -53,7 +53,9 @@ computeRPKM <- function(bamFiles, RIPSeekerRead=TRUE, paired=FALSE,
 		
 	} else {
 		
-		stopifnot(class(featureGRanges) %in% c("character", "GRanges", "GRangesList"))		
+		stopifnot(is.character(featureGRanges) ||
+			  is(featureGRanges, "GRanges") ||
+			  is(featureGRanges, "GRangesList"))
 	}
 
 	# assuming featureGRanges is the file name of tab-delim data

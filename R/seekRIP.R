@@ -19,7 +19,7 @@ seekRIP <- function(nbhGRRIP, nbhGRCTL=NULL, padjMethod="BH", logOddCutoff=-Inf,
 		
 	} else {
 		
-		if(is.list(nbhGRCTL) || class(nbhGRCTL) == "GRangesList") {
+		if(is.list(nbhGRCTL) || is(nbhGRCTL, "GRangesList")) {
 			
 			chrname <- as.character(runValue(seqnames(nbhGRRIP)))
 			
