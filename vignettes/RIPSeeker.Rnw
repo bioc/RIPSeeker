@@ -84,7 +84,7 @@ Only a few RIP-seq datasets are available. In this tutorial, we will make use of
 
 
 <<fullPRC2dataDownload, eval=FALSE>>=
-biocLite("RIPSeekerData")
+BiocManager::install("RIPSeekerData")
 
 library(RIPSeekerData)
 
@@ -344,7 +344,7 @@ As promised earlier, we will apply \Rfunction{ripSeek} to the CCNT1 data and ann
 
 <<ripSeek_CCNT1, eval=FALSE>>=
 # Retrieve system files
-biocLite("RIPSeekerData")
+BiocManager::install("RIPSeekerData")
 
 extdata.dir <- system.file("extdata", package="RIPSeekerData")
 
